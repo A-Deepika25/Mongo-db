@@ -23,11 +23,13 @@ public class UserController {
 	public User saveUser(@RequestBody User user) {
 		System.out.println(user.toString());
 		return userService.saveUser(user);
+
 	}
 
 	@GetMapping("/list")
 	public List<User> getUsers() {
 		return userService.getUsers();
+	
 	}
 
 	@PutMapping("/update/{user_id}")
@@ -39,6 +41,7 @@ public class UserController {
 	public String deleteUser(@PathVariable("user_id") Long id) {
 		userService.deleteUser(id);
 		return "deleted succesfully.";
+		
 	}
 
 }
