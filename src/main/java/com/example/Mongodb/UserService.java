@@ -8,6 +8,8 @@ public interface UserService {
 
 	public List<User> getUsers();
 
+    public ResponseEntity<User>getUserById();
+
 	public User updateUser(Long id, User user);
 
 	public void deleteUser(Long id);
