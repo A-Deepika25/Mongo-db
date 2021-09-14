@@ -6,7 +6,7 @@ public interface UserService {
 
 	public User saveUser(User user);
 
-	public List<User> getUsers();
+	public Listitems<User> getUsers();
 
     public ResponseEntity<User> getUserById(Long id);
 
