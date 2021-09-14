@@ -31,6 +31,10 @@ public class UserController {
 		return userService.getUsers();
 	
 	}
+	@GetMapping("/list/{user_id}")
+    public ResponseEntity<User> getUserById(@PathVariable("user_id") Long id) {
+        return userService.getUserById(id);
+  }
 
 	@PutMapping("/update/{user_id}")
 	public User updateUser(@RequestBody User user, @PathVariable("user_id") Long id) {
@@ -40,7 +44,6 @@ public class UserController {
 	@DeleteMapping("/delete/{user_id}")
 	public String deleteUser(@PathVariable("user_id") Long id) {
 		userService.deleteUser(id);
-		System.out.println("Deleted");
 		return "deleted succesfully ...";
 	}
 
