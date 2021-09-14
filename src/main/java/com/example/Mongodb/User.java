@@ -18,7 +18,7 @@ import lombok.Setter;
 public class User {
 		private long id;
 		private String name;
-		private Integer age;
+		private long age;
 		private int num;
 	}
 
