@@ -10,7 +10,7 @@ public interface UserService {
 
 	public List<User> getUsers();
 
-	public Listitems<User>getUserById();
+	public List<User>getUserById();
 
     public ResponseEntity<User> getUserById(Long id);
 
