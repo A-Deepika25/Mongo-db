@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public Listitems<User> getUserById() {
+	public List<User> getUserById() {
 		return null;
 	}
 
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 			User userEntity = findById.get();
 			if (user.getName() != null && !user.getName().isEmpty())
 				userEntity.setName(user.getName());
-			if (user.getAge() != null)
+			if (user.getAge()!=0)
 				userEntity.setAge(user.getAge());
 			return userRepository.save(userEntity);
 		}
