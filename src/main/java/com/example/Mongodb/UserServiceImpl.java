@@ -4,6 +4,7 @@ import java.util.List;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 
@@ -21,6 +22,16 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> getUsers() {
 		return userRepository.findAll();
+	}
+
+	@Override
+	public Listitems<User> getUserById() {
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<User> getUserById(Long id) {
+		return null;
 	}
 
 	@Override
